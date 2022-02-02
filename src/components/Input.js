@@ -4,8 +4,8 @@ export const Input = ({
 	colorValue,
 	setColorValue,
 	setHexValue,
-	isDarkText,
-	setIsDarkText
+	isTextDark,
+	setIsTextDark
 }) => {
 	return (
 		<form onSubmit={e => e.preventDefaul()}>
@@ -21,7 +21,7 @@ export const Input = ({
 					setHexValue(colorNames(target.value))
 				}}
 			/>
-			<button type='button' onClick={() => setIsDarkText(!isDarkText)}>
+			<button type='button' onClick={() => setIsTextDark(!isTextDark)}>
 				Toggle Text Color
 			</button>
 		</form>

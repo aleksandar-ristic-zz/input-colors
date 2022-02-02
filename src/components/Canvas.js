@@ -1,10 +1,10 @@
-export const Canvas = ({ colorValue, hexValue, isDarkText }) => {
+export const Canvas = ({ colorValue, hexValue, isTextDark }) => {
 	return (
 		<section
 			className='canvas'
 			style={{
 				backgroundColor: colorValue,
-				color: isDarkText ? '#1f1f1f' : '#f0f8ff'
+				color: isTextDark ? '#1f1f1f' : '#f0f8ff'
 			}}
 		>
 			<p>{colorValue ? colorValue : 'No input value.'}</p>
