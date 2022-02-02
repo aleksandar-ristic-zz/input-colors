@@ -1,4 +1,6 @@
-export const Input = ({ colorValue, setColorValue }) => {
+import colorNames from 'colornames'
+
+export const Input = ({ colorValue, setColorValue, setHexValue }) => {
 	return (
 		<form onSubmit={e => e.preventDefaul()}>
 			<label>Add color by name:</label>
@@ -8,7 +10,10 @@ export const Input = ({ colorValue, setColorValue }) => {
 				placeholder='Add color by name'
 				required
 				value={colorValue}
-				onChange={({ target }) => setColorValue(target.value)}
+				onChange={({ target }) => {
+					setColorValue(target.value)
+					setHexValue(colorNames(target.value))
+				}}
 			/>
 		</form>
 	)

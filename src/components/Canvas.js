@@ -1,4 +1,4 @@
-export const Canvas = ({ colorValue }) => {
+export const Canvas = ({ colorValue, hexValue }) => {
 	return (
 		<section
 			className='canvas'
@@ -7,6 +7,7 @@ export const Canvas = ({ colorValue }) => {
 			}}
 		>
 			<p>{colorValue ? colorValue : 'No input value.'}</p>
+			<p>{hexValue ? hexValue : null}</p>
 		</section>
 	)
 }
